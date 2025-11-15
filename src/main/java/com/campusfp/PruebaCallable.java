@@ -1,6 +1,5 @@
 package com.campusfp;
 
-import java.io.Console;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
@@ -8,11 +7,11 @@ import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class PruebaCallable {
     public static void main(String[] args) {
         // 1. Cargar configuración desde db.properties
         Properties props = new Properties();
-        try (InputStream input = Main.class.getClassLoader().getResourceAsStream("db.properties")) {
+        try (InputStream input = PruebaCallable.class.getClassLoader().getResourceAsStream("db.properties")) {
             if (input == null) {
                 System.err.println("No se encontró el archivo db.properties");
                 return;
